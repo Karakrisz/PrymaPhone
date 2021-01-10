@@ -1,0 +1,90 @@
+.c-red {
+    color: #ff0000;
+}
+
+.lni.lni-search.search-sidebar-hover {
+    display: none;
+}
+
+.lni.lni-shopping-basket {
+    display: none;
+}
+
+.sidemenu_btn i {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    margin: 28px 0;
+}
+
+.header-area {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.banner-description {
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    padding: 30px;
+}
+
+.scroll-top-arrow {
+    background-color: #f50206;
+    color: white;
+}
+
+.facebook-bg.facebook-bg-hvr {
+    background: #4267B2;
+}
+
+.banner-section .banner-content-wrapper {
+    padding: 50px !important;
+}
+
+.banner-content-wrapper {
+    background-color: rgba(0, 0, 0, .5);
+    color: white !important;
+    margin: 50px 0;
+}
+
+.banner-content-wrapper__span {
+    color: white !important;
+}
+
+.banner-content-wrapper__h1 {
+    color: white !important;
+}
+
+.banner-content-wrapper__h1 span {
+    color: white !important;
+}
+
+.banner-content-wrapper__p {
+    color: white !important;
+}
+
+@media screen and (max-width: 767px) {
+
+    .banner-description__h1.w-sm-100.w-md-100.w-lg-25.animated.fadeInLeft.delay-1s {
+        font-size: 35px;
+        padding: 20px 0;
+    }
+
+    .banner-content-wrapper {
+        margin: 50px 0;
+    }
+
+    .banner-content-wrapper__h1 {
+        font-size: 23px !important;
+    }
+
+    .banner-content-wrapper__h1 span {
+        font-size: 40px !important;
+    }
+
+}
