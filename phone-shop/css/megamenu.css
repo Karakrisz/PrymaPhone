@@ -511,7 +511,7 @@ a.dropdown-toggle::after {
 .nav-mega .nav-item:hover a.dropdown-toggle::after,
 .nav-mega .dropdown-menu .dropdown-item:hover,
 .nav-mega .dropdown-menu.megamenu .dropdown-item:hover {
-    background: linear-gradient(to right, #f7941d -50%, #f7941d 93%);
+    background: linear-gradient(to right, #f50206 -50%, #f50206 93%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
