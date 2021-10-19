@@ -58,27 +58,30 @@ $("#registration_form_ID").submit(function (event) {
     event.preventDefault();
 
     var event = 'sendemail';
-    var robot_event = 'robotCheck';
     var register_name = $("#register_name").val();
     var register_email = $("#register_email").val();
     var register_password = $("#register_password").val();
     var register_password_2 = $("#register_password_2").val();
+    var robot_check = $("#robot_check").val();
 
-
-    grecaptcha.execute('6Le24cYcAAAAAPxmNg-GevF2QwaMr167IRQVLVMi', {
-        action: 'submit'
-    }).then(function (token) {
-        // Add your logic to submit to your backend server here.
-        document.getElementById('g-recaptcha-response').value = token;
-    });
 
     if (register_password !== register_password_2) {
 
         $('.inserted-alert-danger').fadeIn();
         $('#incorrect_password').text('A jalszavak nem egyeznek meg, próbáld meg újra!');
-    } else {
+    }
+
+    else if (robot_check != "") {
+
+        $('.robot-inserted-alert-danger').fadeIn();
+        $('#incorrect_user').text('Robotok nem regisztrálhatnak!');
+
+    }
+
+    else {
 
         $.ajax({
+            
             type: "POST",
             url: "/registration",
             data: "event=" + event + "&register_name=" + register_name + "&register_email=" + register_email + "&register_password=" + register_password,

@@ -190,27 +190,6 @@ function createUser()
     ];
 }
 
-// function robotCheck()
-// {
-//     $probotEvent = filter_input(INPUT_POST, "robot-event", FILTER_SANITIZE_SPECIAL_CHARS);
-
-//     if ($probotEvent == 'robotCheck') {
-//         function getCaptcha($SecretKey)
-//         {
-//             $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . SECRET_KEY . "&response={$SecretKey}");
-//             $Return = json_decode($Response);
-//             return $Return;
-//         }
-//         $Return = getCaptcha($_POST['g-recaptcha-response']);
-//         //var_dump($Return);
-//         if ($Return->success == true && $Return->score > 0.5) {
-//             echo "Succes!";
-//         } else {
-//             echo "You are a Robot!!";
-//         }
-//     }
-// }
-
 
 define('EMAIL', 'pryma@prymaphone.hu');
 define('PASS', 'Hacker13prog');

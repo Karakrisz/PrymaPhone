@@ -40,19 +40,19 @@
                 <!-- <a href="phone-shop/product-detail.html" class="lastest-addto-cart"><i
                                     class="fa fa-shopping-cart"></i></a> -->
                 <div class="lastest_arrivals__phone-box__div__card lastest_arrivals__phone-box__div__card--d-flex">
-                    <?php foreach ($phones as $phone) : ?>
+                    <?php foreach ($phones as $phone): ?>
                         <div class="image-holder">
                             <!-- <a href="karaKrisz/img/silicon-case/silicon-case.jpg" data-fancybox="lastest_product" data-title="Shirt Name"> -->
                             <?php echo "<img class='card-img-top' alt='" . $phone['brand'] . "' src='data:image/jpeg;base64," . base64_encode($phone['image']) . "'>"; ?>
                             <!-- <img src="karaKrisz/img/silicon-case/silicon-case.jpg" class="card-img-top" alt="Lastest Arrivals 1"> -->
                             </a>
                             <p>
-                            <h5 class="card-title"><?php esc($phone['brand'] .=  ' ' . $phone['type']) ?></h5>
+                            <h5 class="card-title"><?php esc($phone['brand'] .= ' ' . $phone['type'])?></h5>
                             </p>
-                            <p class="card-text"> <?php esc($phone['price']) ?> </p>
-                            <a href="/phone<?php esc($phone['id']) ?>" class="btn green-color-yellow-gradient-btn">További információ</a>
+                            <p class="card-text"> <?php esc($phone['price'])?> </p>
+                            <a href="/phone<?php esc($phone['id'])?>" class="btn green-color-yellow-gradient-btn">További információ</a>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endforeach;?>
                 </div>
                 <a href="/allmobile" class="btn green-color-yellow-gradient-btn lastest_arrivals__phone-box__div__link">Összes készülék megtekintése</a>
             </div>
@@ -870,42 +870,60 @@
                     <!--/.Panel 7-->
                     <!--Panel 8-->
                     <div class="tab-pane fade in show active" id="panel8" role="tabpanel">
+
                         <div class="modal-body">
+
                             <form id="registration_form_ID" method="POST" action="/registration">
+
                                 <div class="md-form form-sm mb-2">
                                     <i class="fas fa-user prefix"></i>
                                     <input name="register_name" id="register_name" class="form-control form-control-sm validate" required>
                                     <label data-error="wrong" data-success="right" for="modalLRInput12">Az Ön neve</label>
                                 </div>
+
                                 <div class="md-form form-sm mb-2">
                                     <i class="fas fa-envelope prefix"></i>
                                     <input type="email" name="register_email" id="register_email" class="form-control form-control-sm validate" required>
                                     <label data-error="wrong" data-success="right" for="modalLRInput12">Az email címe</label>
                                 </div>
+
                                 <div class="md-form form-sm mb-2">
                                     <i class="fas fa-lock prefix"></i>
                                     <input type="password" name="register_password" id="register_password" class="form-control form-control-sm validate" required>
                                     <label data-error="wrong" data-success="right" for="modalLRInput13">A jelszava</label>
                                 </div>
+
                                 <div class="md-form form-sm mb-2">
                                     <i class="fas fa-lock prefix"></i>
                                     <input type="password" name="register_password_2" id="register_password_2" class="form-control form-control-sm validate" required>
                                     <label data-error="wrong" data-success="right" for="modalLRInput14">Jelszó újra</label>
                                 </div>
+
+                                <div class="md-form form-sm mb-2 robot-check-box">
+                                    <input type="password" name="robot_check" id="robot_check" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput14">Robot check</label>
+                                </div>
+
+                                <div class="alert alert-danger inserted-alert-danger robot-inserted-alert-danger login-alert">
+                                    <p id="incorrect_user">
+                                    </p>
+                                </div>
+
                                 <div class="alert alert-danger inserted-alert-danger login-alert">
                                     <p id="incorrect_password">
                                     </p>
                                 </div>
+
                                 <div class="alert alert-success inserted-alert-success login-alert">
                                     <p id="inserted">
                                     </p>
                                 </div>
-                                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
                                 <div class="text-center form-sm mt-2">
-                                    <!-- <input type="hidden" name="robot-event" id="robot-event" value="robotCheck"> -->
                                     <input type="hidden" name="event" id="event" value="sendemail">
                                     <button type="submit" class="btn login-btn g-recaptcha">Regisztráció <i class="fas fa-sign-in ml-1"></i></button>
                                 </div>
+
                             </form>
                         </div>
                         <!--Footer-->

@@ -1,8 +1,3 @@
-<?php
-define('SITE_KEY', '6Le24cYcAAAAAPxmNg-GevF2QwaMr167IRQVLVMi');
-define('SECRET_KEY', '6Le24cYcAAAAAIFLBBTIFntseAwRdjWf7aZe8PJA');
-
-?>
 <html>
 
 <head>
@@ -41,9 +36,6 @@ define('SECRET_KEY', '6Le24cYcAAAAAIFLBBTIFntseAwRdjWf7aZe8PJA');
     <!-- Custom Css  -->
     <link rel="stylesheet" href="phone-shop/css/custom.css">
 
-    <script src="https://www.google.com/recaptcha/api.js?render=<?= SITE_KEY; ?>"></script>
-
-
 </head>
 
 <body>
@@ -52,20 +44,6 @@ define('SECRET_KEY', '6Le24cYcAAAAAIFLBBTIFntseAwRdjWf7aZe8PJA');
     require_once "$view.php";
     require_once "footer.php";
     ?>
-
-    <!-- <script>
-        function onClick(e) {
-            e.preventDefault();
-            grecaptcha.ready(function() {
-                grecaptcha.execute('', {
-                    action: 'submit'
-                }).then(function(token) {
-                    // Add your logic to submit to your backend server here.
-                    document.getElementById('g-recaptcha-response').value = token;
-                });
-            });
-        }
-    </script> -->
 </body>
 
 </html>
