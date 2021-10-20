@@ -34,6 +34,7 @@ var media = window.matchMedia("(max-width: 767px)");
 if (tempData !== "cookieAccepted") {
     $('#CookieModal').modal('show');
     $('#cookie-settings').fadeIn();
+    $('#mobile-registration-btn').hide();
 } else {
     $('#registration-btn').fadeIn();
     $('#cookie-settings').hide();
@@ -42,16 +43,11 @@ if (tempData !== "cookieAccepted") {
 if (tempData == "cookieAccepted" && media.matches) {
     $('#mobile-registration-btn').fadeIn();
     $('#mobile-cookie-settings').hide();
-} else {
+} else if (!media.matches) {
     $('#mobile-registration-btn').hide();
-    $('#mobile-cookie-settings').fadeIn();
+    $('#mobile-cookie-settings').hide();
 }
 
-if (!media.matches) {
-    $('#mobile-cookie-settings').hide();
-} else {
-    $('#mobile-cookie-settings').fadeIn();
-}
 
 $("#registration_form_ID").submit(function (event) {
 
@@ -62,7 +58,7 @@ $("#registration_form_ID").submit(function (event) {
     var register_email = $("#register_email").val();
     var register_password = $("#register_password").val();
     var register_password_2 = $("#register_password_2").val();
-    var robot_check = $("#robot_check").val();
+    var request_id = $("#request_id").val();
 
 
     if (register_password !== register_password_2) {
@@ -71,19 +67,18 @@ $("#registration_form_ID").submit(function (event) {
         $('#incorrect_password').text('A jalszavak nem egyeznek meg, próbáld meg újra!');
     }
 
-    else if (robot_check != "") {
+    else if (request_id != "") {
 
-        $('.robot-inserted-alert-danger').fadeIn();
-        $('#incorrect_user').text('Robotok nem regisztrálhatnak!');
+        $('#request').text('!');
 
     }
 
     else {
 
         $.ajax({
-            
+
             type: "POST",
-            url: "/registration",
+            url: "/quickreg",
             data: "event=" + event + "&register_name=" + register_name + "&register_email=" + register_email + "&register_password=" + register_password,
 
             success: function () {

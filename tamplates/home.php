@@ -873,7 +873,7 @@
 
                         <div class="modal-body">
 
-                            <form id="registration_form_ID" method="POST" action="/registration">
+                            <form id="registration_form_ID" method="POST">
 
                                 <div class="md-form form-sm mb-2">
                                     <i class="fas fa-user prefix"></i>
@@ -899,13 +899,13 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput14">Jelszó újra</label>
                                 </div>
 
-                                <div class="md-form form-sm mb-2 robot-check-box">
-                                    <input type="password" name="robot_check" id="robot_check" class="form-control form-control-sm validate">
-                                    <label data-error="wrong" data-success="right" for="modalLRInput14">Robot check</label>
+                                <div class="md-form form-sm mb-2 request-box">
+                                    <input type="text" name="request_id" id="request_id" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput14"></label>
                                 </div>
 
-                                <div class="alert alert-danger inserted-alert-danger robot-inserted-alert-danger login-alert">
-                                    <p id="incorrect_user">
+                                <div class="alert alert-danger request-inserted-alert-danger login-alert">
+                                    <p id="request">
                                     </p>
                                 </div>
 

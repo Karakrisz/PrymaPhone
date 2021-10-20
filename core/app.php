@@ -8,7 +8,7 @@ $cleaned = explode("?", $uri)[0];
 route('/', 'homeController');
 route('/phone(?<id>[\d]+)', 'singleImageController');
 
-route('/registration', 'UserRegistrationController', "POST");
+route('/quickreg', 'UserRegistrationController', "POST");
 route('/login', 'LoginSubmitController', "POST");
 
 route('/administ', 'adminController');

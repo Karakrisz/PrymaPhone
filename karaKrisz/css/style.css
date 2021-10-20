@@ -206,7 +206,11 @@ img {
     display: none;
 }
 
-.robot-check-box {
+.request-inserted-alert-danger {
+    display: none;
+}
+
+.request-box {
     display: none;
 }
 
@@ -912,4 +916,15 @@ and also iPads specifically.
         margin-top: 115px;
     }
 
+}
+
+@media screen and (max-width: 320px) {
+    .row.upper-nav {
+        padding: 0;
+    }
+
+    .navbar-brand {
+        max-width: 185px !important;
+        margin: 35px 0 25px 10px !important;
+    }
 }
